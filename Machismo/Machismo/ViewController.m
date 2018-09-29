@@ -50,6 +50,12 @@
             [sender setBackgroundImage:[UIImage imageNamed:@"blank"]
                               forState:UIControlStateNormal];
             [sender setTitle:card.contents forState:UIControlStateNormal];
+            
+            if ([[(PlayingCards*)card suit]  isEqual: @"♥︎"] || [[(PlayingCards*)card suit]  isEqual: @"♦︎"]) {
+                [sender setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+            } else {
+                [sender setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+            }
         }
         
     } else {
